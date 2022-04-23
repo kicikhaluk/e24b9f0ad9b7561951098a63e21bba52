@@ -27,25 +27,29 @@ const Products = () => {
   return (
     <div>
       <Search onSearch={handleSearch} />
-      {!searchValue
-        ? products.map((product) => (
-            <div key={product.id}>
-              {product.title} - {product.variants[0]?.price}
-            </div>
-          ))
-        : currentData().map((product) => (
+      {!searchValue ? (
+        products.map((product) => (
+          <div key={product.id}>
+            {product.title} - {product.variants[0]?.price}
+          </div>
+        ))
+      ) : (
+        <>
+          {currentData().map((product) => (
             <div key={product.id}>
               {product.title} - {product.variants[0]?.price}
             </div>
           ))}
-      {maxPage > 1 && (
-        <Pagination
-          currentPage={currentPage}
-          maxPage={maxPage}
-          jumpToPage={jump}
-          prevPage={prev}
-          nextPage={next}
-        />
+          {maxPage > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              maxPage={maxPage}
+              jumpToPage={jump}
+              prevPage={prev}
+              nextPage={next}
+            />
+          )}
+        </>
       )}
     </div>
   );

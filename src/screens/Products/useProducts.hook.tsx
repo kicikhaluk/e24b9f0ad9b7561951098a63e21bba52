@@ -25,10 +25,6 @@ const useProducts = () => {
     10
   );
 
-  console.log('*** useProducts ***');
-  console.log(filteredResult);
-  console.log('*******');
-
   return React.useMemo(
     () => ({
       searchValue,
