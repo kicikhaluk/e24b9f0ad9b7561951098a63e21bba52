@@ -1,5 +1,11 @@
+import { Products } from './screens';
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Products />
+    </div>
+  );
 };
 
 export default App;
