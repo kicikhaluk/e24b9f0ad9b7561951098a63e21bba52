@@ -35,12 +35,10 @@ function useFetch<T>(url?: string, options?: RequestInit): State<T> {
   };
 
   const [state, dispatch] = useReducer(fetchReducer, initialState);
-  console.log(cache.current);
+
   useEffect(() => {
-    console.log('fetched');
     // Do nothing if the url is not given
     if (!url) return;
-    console.log('fetched, url!!');
     const fetchData = async () => {
       dispatch({ type: 'loading' });
 
@@ -58,7 +56,6 @@ function useFetch<T>(url?: string, options?: RequestInit): State<T> {
 
         const data = (await response.json()) as T;
         cache.current[url] = data;
-        console.log(data);
         if (cancelRequest.current) return;
 
         dispatch({ type: 'fetched', payload: data });
@@ -72,11 +69,10 @@ function useFetch<T>(url?: string, options?: RequestInit): State<T> {
     fetchData();
 
     return () => {
-      console.log('cancel request current ');
       cancelRequest.current = true;
     };
   }, [url]);
-  console.log(state);
+
   return state;
 }
 

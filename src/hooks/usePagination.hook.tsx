@@ -23,17 +23,14 @@ const usePagination = <T,>(data: T[], itemsPerPage: number) => {
     setCurrentPage(Math.min(pageNumber, maxPage));
   };
 
-  return React.useMemo(
-    () => ({
-      next,
-      prev,
-      jump,
-      currentData,
-      currentPage,
-      maxPage,
-    }),
-    [next, prev, jump, currentData, currentPage, maxPage]
-  );
+  return {
+    next,
+    prev,
+    jump,
+    currentData,
+    currentPage,
+    maxPage,
+  };
 };
 
 export default usePagination;

@@ -28,14 +28,11 @@ const useSearch = <T,>({
     setFilteredResult(filtered);
   };
 
-  return React.useMemo(
-    () => ({
-      filteredResult,
-      handleSearch,
-      searchValue,
-    }),
-    [filteredResult, handleSearch, searchValue]
-  );
+  return {
+    filteredResult,
+    handleSearch,
+    searchValue,
+  };
 };
 
 export default useSearch;
