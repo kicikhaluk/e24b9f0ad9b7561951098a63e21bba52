@@ -1,6 +1,7 @@
 .hstack {
   display: flex;
   align-items: center;
+  justify-content: center;
   &__spacing--sm{
     gap:0.25rem;
   }
@@ -32,6 +33,25 @@
     }
     &__spacing--2xl{
       gap:1.5rem;
+    }
+    &--justify_end{
+      justify-content: flex-end;
+    }
+  
+    &--justify_center{
+      justify-content: center;
+    }
+  
+    &--justify_start{
+      justify-content: flex-start;
+    }
+  
+    &--justify_between{
+      justify-content: space-between;
+    }
+  
+    &--justify_around{
+      justify-content: space-around;
     }
   }
 

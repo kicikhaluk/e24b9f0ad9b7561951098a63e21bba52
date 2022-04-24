@@ -1,8 +1,6 @@
-import cn from 'classnames';
 import Button from '../UI/button/button';
 import HStack from '../UI/hstack/hstack';
 import { ChevronLeft, ChevronRight } from '../../icons';
-import styles from './pagination.module.scss';
 
 interface IPaginationProps {
   nextPage: () => void;
@@ -20,7 +18,7 @@ const Pagination: React.FC<IPaginationProps> = ({
   maxPage,
 }) => {
   return (
-    <HStack spacing='sm' as='ul'>
+    <HStack spacing='sm' as='ul' justify='end'>
       <li>
         <Button size='md' onClick={prevPage}>
           <ChevronLeft />

@@ -28,7 +28,9 @@ const ProductDetails = () => {
     return (
       <div>
         Not founded product here
-        <Link to='/'>Go to product page</Link>
+        <Link className={styles.link} to='/'>
+          Go to product page
+        </Link>
       </div>
     );
   }
@@ -73,7 +75,9 @@ const ProductDetails = () => {
             dangerouslySetInnerHTML={{ __html: product.body_html }}
           />
         </div>
-        <Link to='/'>Go Back</Link>
+        <Link to='/' className={styles.link}>
+          Go Back
+        </Link>
       </section>
     </div>
   );

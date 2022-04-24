@@ -1,30 +1,53 @@
+@import '../../assets/css/_variables.scss';
 .product {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  display: block;
   &__showcase_wrapper {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-  }
-  &__images_wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  &__info{
     display: flex;
     flex-direction: column;
-    & > p {
-      margin-bottom: 0.25rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+   }
+   &__images_wrapper {
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     margin-top: 1rem;
+   }
+   &__info{
+     display: flex;
+     flex-direction: column;
+     & > p {
+       margin-bottom: 0.25rem;
+     }
+   }
+   &__about{
+     margin: 1rem 0;
+   }
+   &__body {
+     margin-top: 0.5rem;
+   }
+ 
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    &__images_wrapper {
+      gap:1rem;
+      margin-top: 2rem;
+    }
+    &__showcase_wrapper{
+      margin-bottom: 0;
     }
   }
-  &__about{
-    margin: 1rem 0;
-  }
-  &__body {
-    margin-top: 0.5rem;
-  }
+}
 
+.link {
+  padding: 0.25rem 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 0.4rem;
+  background-color: $accent_color;
+  color: $light_color;
+  &:hover {
+    text-decoration: underline;
+  }
 }
