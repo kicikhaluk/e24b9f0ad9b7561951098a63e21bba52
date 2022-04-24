@@ -1,0 +1,30 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  &__showcase_wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+  }
+  &__images_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    & > p {
+      margin-bottom: 0.25rem;
+    }
+  }
+  &__about{
+    margin: 1rem 0;
+  }
+  &__body {
+    margin-top: 0.5rem;
+  }
+
+}

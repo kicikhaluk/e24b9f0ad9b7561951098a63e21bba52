@@ -1,6 +1,9 @@
-import { ChevronLeft, ChevronRight } from '../../icons';
 import cn from 'classnames';
+import Button from '../UI/button/button';
+import HStack from '../UI/hstack/hstack';
+import { ChevronLeft, ChevronRight } from '../../icons';
 import styles from './pagination.module.scss';
+
 interface IPaginationProps {
   nextPage: () => void;
   prevPage: () => void;
@@ -17,11 +20,11 @@ const Pagination: React.FC<IPaginationProps> = ({
   maxPage,
 }) => {
   return (
-    <div>
+    <HStack spacing='sm' as='ul'>
       <li>
-        <button onClick={prevPage}>
+        <Button size='md' onClick={prevPage}>
           <ChevronLeft />
-        </button>
+        </Button>
       </li>
       {Array.from(
         {
@@ -29,17 +32,21 @@ const Pagination: React.FC<IPaginationProps> = ({
         },
         (_, k) => k + 1
       ).map((page) => (
-        <li key={page} className={cn(currentPage === page && styles.current)}>
-          <button onClick={() => jumpToPage(page)}>{page}</button>
+        <li key={page}>
+          <Button
+            variant={currentPage == page ? 'primary' : 'dark'}
+            onClick={() => jumpToPage(page)}
+          >
+            {page}
+          </Button>
         </li>
       ))}
-
       <li>
-        <button onClick={nextPage}>
+        <Button onClick={nextPage}>
           <ChevronRight />
-        </button>
+        </Button>
       </li>
-    </div>
+    </HStack>
   );
 };
 

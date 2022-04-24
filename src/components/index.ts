@@ -3,6 +3,7 @@ export { default as Spinner } from './UI/spinner/spinner';
 export { default as HStack } from './UI/hstack/hstack';
 export { default as Grid } from './UI/grid/grid';
 export { default as Button } from './UI/button/button';
+export { default as AspectRatio } from './UI/aspect-ratio/aspect-ratio';
 
 export { default as Search } from './search/search';
 export { default as Layout } from './layout/layout';
