@@ -32,7 +32,7 @@ const Pagination: React.FC<IPaginationProps> = ({
       ).map((page) => (
         <li key={page}>
           <Button
-            variant={currentPage == page ? 'primary' : 'dark'}
+            variant={currentPage === page ? 'primary' : 'dark'}
             onClick={() => jumpToPage(page)}
           >
             {page}
