@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Product as TProduct } from '../../types/Product';
 import { Header, Text } from '../../typography';
-import Button from '../UI/button/button';
+import Button from '../UI/button/button.component';
 import styles from './product.module.scss';
 
 const Product: React.FC<{ product: TProduct }> = ({ product }) => {

@@ -1,4 +1,5 @@
-import { Search, Spinner, Grid, Product, Pagination } from '../../components';
+import { Search, Spinner, Pagination } from '../../components';
+import ProdcutList from './prodcut-list.component';
 import useProducts from './useProducts.hook';
 
 const Products = () => {
@@ -26,19 +27,7 @@ const Products = () => {
   return (
     <>
       <Search onSearch={handleSearch} />
-      <Grid>
-        {!searchValue ? (
-          products.map((product) => (
-            <Product key={product.id} product={product} />
-          ))
-        ) : (
-          <>
-            {currentData().map((product) => (
-              <Product key={product.id} product={product} />
-            ))}
-          </>
-        )}
-      </Grid>
+      <ProdcutList products={!searchValue ? products : currentData()} />
       {searchValue && maxPage > 1 && (
         <Pagination
           currentPage={currentPage}

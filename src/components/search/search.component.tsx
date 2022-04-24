@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Input from '../UI/input/input';
+import Input from '../UI/input/input.component';
 import { Search as SearchIcon } from '../../icons';
 
 interface ISearchProps {

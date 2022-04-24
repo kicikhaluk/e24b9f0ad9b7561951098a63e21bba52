@@ -1,5 +1,5 @@
-import Button from '../UI/button/button';
-import HStack from '../UI/hstack/hstack';
+import Button from '../UI/button/button.component';
+import HStack from '../UI/hstack/hstack.component';
 import { ChevronLeft, ChevronRight } from '../../icons';
 
 interface IPaginationProps {
