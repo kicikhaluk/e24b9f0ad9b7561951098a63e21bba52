@@ -1,0 +1,34 @@
+@import '../../assets/css/_variables.scss';
+.text {
+  &__primary {
+    color: $primary_color;
+  }
+  &__dark {
+    color: $dark_color;
+  }
+  &--xl {
+    font-size: 1.125rem;
+  }
+  &--lg {
+    font-size: 1rem;
+  }
+  &--md {
+    font-size: 0.875rem;
+  }
+  &--sm {
+    font-size: 0.75rem;
+  }
+  &--light {
+    font-weight: 300;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--semibold {
+    font-weight: 500;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+
+}

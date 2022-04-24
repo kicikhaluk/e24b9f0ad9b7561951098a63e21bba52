@@ -1,0 +1,71 @@
+@import '../../../assets/css/_variables.scss';
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-width: 1px;
+  border-style: solid;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+  &__primary {
+    background-color: $primary_color;
+    color: $dark_color;
+    border-color: $primary_color;
+  }
+  &__dark {
+    background-color: $dark_color;
+    border-color: $dark_color;
+    color: $primary_color;
+   
+  }
+  &__default {
+    background-color: $gray_color;
+    color: $light_color;
+    border:none;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  &--sm {
+    height: 25px;
+    padding: 0 10px;
+    font-size: 0.75rem;
+  }
+  &--md {
+    height: 30px;
+    padding: 0 10px;
+    font-size:0.9rem
+  }
+  &--lg {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+  &--xl {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 1.25rem;
+  }
+  &--rounded {
+    border-radius: 999px;
+  }
+  &--full {
+    width: 100%;
+  }
+}

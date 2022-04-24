@@ -1,5 +1,4 @@
-import { Search } from '../../components';
-import Pagination from '../../components/pagination/pagination';
+import { Search, Spinner, Grid, Product, Pagination } from '../../components';
 import useProducts from './useProducts.hook';
 
 const Products = () => {
@@ -18,40 +17,38 @@ const Products = () => {
   } = useProducts();
 
   if (loading) {
-    return <h1>loading...</h1>;
+    return <Spinner isFullScreen />;
   }
   if (error) {
-    return <h1>{error}</h1>;
+    return <h1>{error.message} </h1>;
   }
 
   return (
-    <div>
+    <>
       <Search onSearch={handleSearch} />
-      {!searchValue ? (
-        products.map((product) => (
-          <div key={product.id}>
-            {product.title} - {product.variants[0]?.price}
-          </div>
-        ))
-      ) : (
-        <>
-          {currentData().map((product) => (
-            <div key={product.id}>
-              {product.title} - {product.variants[0]?.price}
-            </div>
-          ))}
-          {maxPage > 1 && (
-            <Pagination
-              currentPage={currentPage}
-              maxPage={maxPage}
-              jumpToPage={jump}
-              prevPage={prev}
-              nextPage={next}
-            />
-          )}
-        </>
+      <Grid>
+        {!searchValue ? (
+          products.map((product) => (
+            <Product key={product.id} product={product} />
+          ))
+        ) : (
+          <>
+            {currentData().map((product) => (
+              <Product key={product.id} product={product} />
+            ))}
+          </>
+        )}
+      </Grid>
+      {searchValue && maxPage > 1 && (
+        <Pagination
+          currentPage={currentPage}
+          maxPage={maxPage}
+          jumpToPage={jump}
+          prevPage={prev}
+          nextPage={next}
+        />
       )}
-    </div>
+    </>
   );
 };
 

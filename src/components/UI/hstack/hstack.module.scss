@@ -1,0 +1,52 @@
+.hstack {
+  display: flex;
+  align-items: center;
+  &__spacing--sm{
+    gap:0.25rem;
+  }
+  &__spacing--md{
+   gap:0.5rem
+  }
+  &__spacing--lg{
+    gap:0.75rem;
+  }
+  &__spacing--xl{
+    gap:1rem;
+  }
+  &__spacing--2xl{
+    gap:1.25rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__spacing--sm{
+      gap:0.5rem;
+    }
+    &__spacing--md{
+      gap:0.75rem;
+    }
+    &__spacing--lg{
+      gap:1rem;
+    }
+    &__spacing--xl{
+      gap:1.25rem;
+    }
+    &__spacing--2xl{
+      gap:1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__spacing--md{
+      gap:1rem;
+    }
+    &__spacing--lg{
+      gap:1.5rem;
+    }
+    &__spacing--xl{
+      gap:2rem;
+    }
+    &__spacing--2xl{
+      gap:3rem;
+    }
+  }
+}
