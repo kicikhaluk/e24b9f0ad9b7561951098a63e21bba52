@@ -1,3 +1,10 @@
+/**
+ * useFetch hook provides basic cache mechanism
+ * it store the url as key to an object and the data as value. It only refetch the data if the url is changed.
+ * Also if the component unmounts while fetching, it does not update the state.
+ *
+ */
+
 import { useEffect, useReducer, useRef } from 'react';
 
 interface State<T> {

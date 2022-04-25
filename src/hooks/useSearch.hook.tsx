@@ -1,3 +1,8 @@
+/**
+ * useSearch hook filters the list of array with type T and returns the filtered list
+ * depend on search value and callback function(filterHandler).
+ */
+
 import * as React from 'react';
 
 type SearchState<T> = {

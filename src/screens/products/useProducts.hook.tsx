@@ -1,3 +1,7 @@
+/**
+ * Specific hook for handle product screen logic.
+ */
+
 import * as React from 'react';
 import { API_BASE, HEADER_TOKEN } from '../../constants/env';
 import { useFetch, usePagination, useSearch } from '../../hooks';

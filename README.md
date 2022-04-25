@@ -14,9 +14,9 @@ website Link: https://spontaneous-gnome-50563c.netlify.app
 
 for getting list of product, client make request with
 
-### `REACT_APP_API_URL/functions/products`
+### `REACT_APP_API_URL/ + functions/products`
 
-so if your request endpoint is www.example.com/functions/products, you should set the env variable with www.example.com.
+so if your request endpoint is www.example.com/functions/products, you should set the env variable with https://www.example.com/
 
 Don't share env variables in codebase or repo.
 

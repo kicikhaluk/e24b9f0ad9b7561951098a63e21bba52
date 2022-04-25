@@ -1,3 +1,7 @@
+/**
+ * usePagination hook contains only logic for pagination.
+ */
+
 import * as React from 'react';
 
 const usePagination = <T,>(data: T[], itemsPerPage: number) => {
